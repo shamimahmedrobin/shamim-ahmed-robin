@@ -8,12 +8,31 @@
 </head>
 <body>
     <header>
-        <nav class="pt-6 md:flex md:justify-between md:ml-16">
-            <h5 class="font-extrabold text-4xl pb-3 pl-4"><a href="index.html"><span class="text-[#21243D]">SHA</span><span class="text-[#FF6464]">MIM</span></a></h5>
-            <ul class="md:flex md:gap-14 md:mr-16 text-center">
-                <li class="font-medium text-xl pb-3"><a href="works.html">Works</a></li>
-                <li class="font-medium text-xl pb-3"><a href="blog.html">Blog</a></li>
-                <li class="font-medium text-xl"><a href="contact.html">Contact</a></li>
+        <nav class="pt-10 md:px-20 md:pt-10 md:flex md:items-center md:justify-between">
+            <div class="flex justify-between items-center">
+                <span class="font-extrabold text-4xl">
+                    <span class="text-[#21243D]">SHA</span><span class="text-[#FF6464]">MIM</span>
+                </span>
+                <span class="text-xl cursor-pointer md:hidden font-medium hover:text-cyan-500 duration-100">
+                    <svg name="menu" onclick="Menu(this)" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                </span>
+            </div>
+            <ul class="md:flex md:items-center z-40 md:z-auto md:static absolute object-top bg-white w-full h-full left-0 justify-self-end self-end text-right transition-all ease-in duration-300 md:opacity-100 opacity-0 md:w-auto md:bg-white">
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="index.html" class="font-medium text-xl hover:text-cyan-500 duration-500">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="blog.html" class="font-medium text-xl hover:text-cyan-500 duration-500">Blog's</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="works.html" class="font-medium text-xl hover:text-cyan-500 duration-500">Works</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="contact.html" class="font-medium text-xl hover:text-cyan-500 duration-500">Contact</a>
+                </li>
+                <button class="bg-cyan-400 text-white duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded">
+                    Book Now
+                </button>
             </ul>
         </nav>
     </header>
@@ -55,7 +74,7 @@
             <label class="" for="Name"><input class="w-[350px] border border-gray-700 bg-gray-100 border-spacing-1 text-center rounded-md py-1 mb-3" type="email" name="Full Name" id="Name" placeholder="Email Address" required></label>
             <label class="" for="Name"><input class="w-[350px] border border-gray-700 bg-gray-100 border-spacing-1 text-center rounded-md py-1 mb-3" type="text" name="Full Name" id="Name" placeholder="Subject" required></label>
             <textarea class="w-[350px] border border-gray-700 bg-gray-100 border-spacing-1 p-1 rounded-md py-1 mb-3" name="" id="" placeholder="Massage"></textarea>
-            <button type="submit" class="bg-[#FF6464] text-white font-medium text-xl px-4 py-2 rounded-md flex justify-center items-center hover:bg-[#21243D]"><a href="gretings.html">Send Message</a></button>
+            <button class="bg-[#FF6464] text-white font-medium text-xl px-4 py-2 rounded-md flex justify-center items-center hover:bg-[#21243D]" type="submit"><a href="gretings.html">Send Message</a></button>
         </div>
     </main>
     <footer class="pb-14 pt-14 bg-[#EDF7FA]">
@@ -67,6 +86,13 @@
         </div>
         <p class="text-[#21243D] text-base text-center pt-5">Copyright &copy;2025 All rights reserved</p>
     </footer>
+    <script>
+        function Menu(e){
+            let list = document.querySelector('ul');
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :(e.name = "menu", list.classList.remove('top-[80px]') , list.classList.remove('opacity-100'))
+        }
+
+    </script>
     
 </body>
 </html>
